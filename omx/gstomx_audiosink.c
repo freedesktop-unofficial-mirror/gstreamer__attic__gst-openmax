@@ -109,9 +109,5 @@ type_class_init (gpointer g_class, gpointer class_data)
 static void
 type_instance_init (GTypeInstance * instance, gpointer g_class)
 {
-  GstOmxBaseSink *omx_base;
-
-  omx_base = GST_OMX_BASE_SINK (instance);
-
-  GST_DEBUG_OBJECT (omx_base, "start");
+  GST_DEBUG_OBJECT (instance, "start");
 }

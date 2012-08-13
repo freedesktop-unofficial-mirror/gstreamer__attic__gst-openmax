@@ -130,19 +130,16 @@ finalize (GObject * obj)
 static GstFlowReturn
 render (GstBaseSink * gst_base, GstBuffer * buf)
 {
-  GOmxCore *gomx;
   GOmxPort *in_port;
   GstOmxBaseSink *self;
   GstFlowReturn ret = GST_FLOW_OK;
 
   self = GST_OMX_BASE_SINK (gst_base);
 
-  gomx = self->gomx;
-
   GST_LOG_OBJECT (self, "begin");
   GST_LOG_OBJECT (self, "gst_buffer: size=%u", GST_BUFFER_SIZE (buf));
 
-  GST_LOG_OBJECT (self, "state: %d", gomx->omx_state);
+  GST_LOG_OBJECT (self, "state: %d", self->gomx->omx_state);
 
   in_port = self->in_port;
 
