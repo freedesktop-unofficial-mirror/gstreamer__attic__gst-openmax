@@ -129,3 +129,9 @@ AC_CONFIG_FILES([Makefile \
 		 m4/Makefile])
 
 AC_OUTPUT
+
+AC_MSG_WARN([
+==============================================================================
+ gst-openmax is no longer maintained. Please use gst-omx instead.
+==============================================================================
+])
