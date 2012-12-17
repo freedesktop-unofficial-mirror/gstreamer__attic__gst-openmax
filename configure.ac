@@ -1,6 +1,6 @@
 AC_PREREQ([2.52])
 
-AC_INIT([gst-openmax], m4_esyscmd([build-aux/git-version-gen]),
+AC_INIT([gst-openmax], [0.10.1.1],
         [http://bugzilla.gnome.org/enter_bug.cgi?product=GStreamer&component=gst-openmax])
 
 AC_CONFIG_AUX_DIR([build-aux])
@@ -35,6 +35,8 @@ AC_CONFIG_MACRO_DIR([m4])
 
 dnl initialize GStreamer macros
 AG_GST_INIT
+
+AS_VERSION
 
 dnl check if this is a release version
 AS_NANO(GST_GIT="no", GST_GIT="yes")
