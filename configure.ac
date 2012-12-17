@@ -36,8 +36,12 @@ AC_CONFIG_MACRO_DIR([m4])
 dnl initialize GStreamer macros
 AG_GST_INIT
 
+dnl check if this is a release version
+AS_NANO(GST_GIT="no", GST_GIT="yes")
+
 dnl define an ERROR_CFLAGS Makefile variable
-AG_GST_SET_ERROR_CFLAGS($GST_CVS)
+AG_GST_ARG_DISABLE_FATAL_WARNINGS
+AG_GST_SET_ERROR_CFLAGS($FATAL_WARNINGS)
 
 dnl set up gettext
 dnl the version check needs to stay here because autopoint greps for it
